@@ -53,6 +53,8 @@ class SemVersion
   end
 
   def <=>(other)
+    return false if other.nil?
+    
     maj = @major <=> other.major
     return maj unless maj == 0
 
